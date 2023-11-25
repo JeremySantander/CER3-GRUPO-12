@@ -27,7 +27,7 @@ class Segmento(models.Model):
 class Evento(models.Model):
     id = models.BigAutoField(primary_key=True)
     fecha_inicio = models.DateTimeField()
-    fecha_terminon = models.DateTimeField()
+    fecha_termino = models.DateTimeField()
     titulo = models.CharField(max_length=75)
     descripcion = models.CharField(max_length=700)
     tipo = models.CharField(max_length=20, choices=TIPO_CHOICES, default = 'S')
