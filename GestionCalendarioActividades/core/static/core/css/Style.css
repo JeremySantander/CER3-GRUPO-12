@@ -1,0 +1,22 @@
+#LogoU{
+    height: 150px;
+    width: 450px;
+}
+#ImagenPrincipal{
+    size: 50%;
+    width: 100% ;
+}
+#Front{
+    background-color: #004b85;
+}
+#SegmentosBar{
+    width: 24rem;
+}
+#TiposBar{
+    width: 24rem;
+}
+.btn{
+    border-color: #f7ae00;
+    background-color: #f7ae00;
+    color: #000;
+}

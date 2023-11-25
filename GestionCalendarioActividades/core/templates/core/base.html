@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+</head>
+<body>
+    <div id="Front">
+        <img src="{% static 'core/img/Logo Universidad/Dirección Sede Viña del Mar (1).png' %}" alt="Logo Universidad" id="LogoU"><br>
+        <div class="container-fluid">
+            <img src="{% static 'core/img/Logo Universidad/fondo_viña.png' %}" alt="Calendario de Actividades <año>" id="ImagenPrincipal">
+            <div class="container-fluid" id="FiltrarSeg">
+                <div class="row">
+                    <div class="col">
+                        <form method="post">
+                            {% csrf_token %}
+                            <select class="form-select" name="FiltrarSegmento" aria-label="Default select example" id="SegmentosBar">
+                                <option value=""selected>Segmento</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">Filtrar Segmento</button>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form method="post">
+                            {% csrf_token %}
+                            <select class="form-select" name="FiltrarTipo" aria-label="Default select example" id="TiposBar">
+                                <option value=""selected>Tipo</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">Filtrar Tipo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block content %}
+    
+    {% endblock %}
+    <div id="Actividades">
+
+    </div>
+    <nav class="navbar navbar-expand hideIfSmall" style="background-color: #008452;" id="LaNavBar">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/admin">Administración</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
