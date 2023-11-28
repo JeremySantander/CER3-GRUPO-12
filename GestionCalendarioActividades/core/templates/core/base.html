@@ -21,6 +21,19 @@
                             {% csrf_token %}
                             <select class="form-select" name="FiltrarSegmento" aria-label="Default select example" id="SegmentosBar">
                                 <option value=""selected>Segmento</option>
+                                <option value="V">Vacaciones</option>
+                                <option value="F">Feriado</option>
+                                <option value="SA">Suspencion de Actividades</option>
+                                <option value="SAP">Suspencion de Actividades PM</option>
+                                <option value="P">Periodo Lectivo</option>
+                                <option value="SE">Suspension de Evaluaciones</option>
+                                <option value="C">Ceremonia</option>
+                                <option value="ED">EDDA</option>
+                                <option value="E">Evaluacion</option>
+                                <option value="A">Ayudantias</option>
+                                <option value="H">Hito Academico</option>
+                                <option value="S">Secretaria Academica</option>
+                                <option value="O">OAI</option>
                             </select>
                             <button type="submit" class="btn btn-primary">Filtrar Segmento</button>
                         </form>
@@ -30,6 +43,10 @@
                             {% csrf_token %}
                             <select class="form-select" name="FiltrarTipo" aria-label="Default select example" id="TiposBar">
                                 <option value=""selected>Tipo</option>
+                                <option value="C">Comunidad USM</option>
+                                <option value="E">Estudiante</option>
+                                <option value="P">Profesor</option>
+                                <option value="J">Jefe de Carrerra</option>
                             </select>
                             <button type="submit" class="btn btn-primary">Filtrar Tipo</button>
                         </form>
