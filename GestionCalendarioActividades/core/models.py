@@ -16,13 +16,12 @@ TIPO_CHOICES = [
     ("S", "Secretaria Academica"),
     ("O", "OAI")]
 
-class Segmento(models.Model):
-    C = "Comunidad USM",
-    E = "Estudiante",
-    P = "Profesor",
-    J= "Jefe de Carrerra"
-    def __str__(self) -> str:
-        return self.titulo
+TIPO_SEGMENTO = [
+    ("C", "Comunidad USM"),
+    ("E" , "Estudiante"),
+    ("P" ,"Profesor"),
+    ("J", "Jefe de Carrerra")
+]
 
 class Evento(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -31,7 +30,7 @@ class Evento(models.Model):
     titulo = models.CharField(max_length=75)
     descripcion = models.CharField(max_length=700)
     tipo = models.CharField(max_length=20, choices=TIPO_CHOICES, default = 'S')
-    segmento = models.ManyToManyField(Segmento)
+    segmento = models.CharField(max_length=20, choices=TIPO_SEGMENTO, default = 'C')
     def __str__(self) -> str:
         return self.titulo
     
